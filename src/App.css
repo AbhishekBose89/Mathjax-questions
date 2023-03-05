@@ -1,0 +1,89 @@
+/* Default styles for all devices */
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid black;
+	border-radius: 8px;
+	box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
+		2px 2px 5px rgba(94, 104, 121, 0.3);
+	padding-bottom: 20px;
+}
+
+.btn {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 90%;
+}
+
+.button {
+	width: 100px;
+	height: 40px;
+	border-radius: 5px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	padding: 0 0.5rem;
+	font-size: 14px;
+	color: white;
+}
+#prevBtn {
+	background-color: #d9534f;
+}
+#nextBtn {
+	background-color: #0275d8;
+}
+#prevBtn:hover {
+	background-color: rgb(243, 226, 130);
+	color: black;
+}
+#nextBtn:hover {
+	background-color: rgb(243, 226, 130);
+	color: black;
+}
+#prevBtn[disabled] {
+	background-color: #666666;
+	color: whitesmoke;
+}
+#nextBtn[disabled] {
+	background-color: #666666;
+	color: whitesmoke;
+}
+
+/* Styles for mobile devices (up to 767px) */
+
+@media (max-width: 767px) {
+	.container {
+		margin: 0 auto;
+		margin-top: 20px;
+		width: 95%;
+	}
+}
+
+/* Styles for tablet devices (768px to 1023px) */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.container {
+		flex-direction: column;
+		width: 95%;
+		margin: 0 auto;
+		margin-top: 30px;
+	}
+}
+
+/* Styles for desktop devices (1024px and above) */
+
+@media (min-width: 1024px) {
+	.container {
+		width: 95%;
+		max-width: 1200px;
+		margin: 0 auto;
+		margin-top: 30px;
+	}
+}
